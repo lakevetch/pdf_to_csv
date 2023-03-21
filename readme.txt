@@ -1,8 +1,8 @@
 Hi! Thanks for using my pdf converter.
 
-This app has some dependencies. To install them follow these steps:
-1- Go to the "installers" folder and double-click each file
-2- Follow each installer's instructions
+This app has some dependencies. Soon there will be an "installers" script to download the requisite files. For now, to install them follow these steps:
+1- Download and install python from python.org
+2- Download and install Java and JDK (Java development tools)
 3- Open a Terminal, if you haven't done this before, find it in Launchpad
 4- Type the following: python3 -m ensurepip
 5- The above may have downloaded a tool called "pip" or it may have told you "requirement already satisfied" with the file path to where pip is found. Either way, you're good.
