@@ -28,9 +28,7 @@ def welcome():
     print("\nYou will need to place the file you wish to convert into the"
           " folder where this \napp's main.py file lives. If you do not see"
           " your file, please quit and add it \nto the folder before"
-          " returning.")
-    print("\nIf you do not have Java installed on your computer, please quit"
-          " and install it \nbefore returning.\n")
+          " returning.\n")
 
 def choose_pdf():
     i = 0
