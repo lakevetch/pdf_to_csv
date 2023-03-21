@@ -1,5 +1,9 @@
 import tabula
 import os
+import logging
+logging.basicConfig(filename='app.log', level=logging.DEBUG, 
+                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger=logging.getLogger(__name__)
 
 DIR = os.listdir(os.curdir)
 
@@ -18,7 +22,7 @@ def main():
         print()
 
 def welcome():
-    print("Welcome to the pdf to csv table converter!"
+    print("\nWelcome to the pdf to csv table converter!"
           "\nThis app will extract a table from a pdf and export it as a csv"
           " file.")
     print("\nYou will need to place the file you wish to convert into the"
@@ -29,23 +33,34 @@ def welcome():
           " and install it \nbefore returning.\n")
 
 def choose_pdf():
-    i = 1
-    print("Files in current directory: ")
+    i = 0
+    label = 1
+    indices = []
+    labels = []
+    print("Eligible files in current directory: ")
     for file in DIR:
-        print(str(i) + ": " + file)
+        if os.path.splitext(file)[1] == ".pdf":
+            print(str(label) + ": " + file)
+            indices.append(i)
+            labels.append(label)
+            label+= 1
         i += 1
     print()
-    index = validate_int("Enter the number of the file to convert: ")
-    index -= 1
+    label_choice = validate_int("Enter the number of the file to convert: ")
+    index = indices[labels.index(label_choice)]
     return index
 
 def convert_to_csv(index):
     out_file = validate_csv('Enter desired output filename with .csv extension'
                      ' (e.g. "file.csv"): ')
-    tabula.convert_into(DIR[index], out_file, output_format="csv", pages="all")
-    return out_file
+    try:
+        tabula.convert_into(DIR[index], out_file, output_format="csv", pages="all")
+        return out_file
+    except Exception as err:
+        logger.error(err)
 
 def confirmation(out_file):
+    DIR = os.listdir(os.curdir)
     if out_file in DIR:
         print("Success!")
     else:
@@ -78,6 +93,7 @@ def validate_y_n(prompt="Enter y/n: "):
             return answer
 
 def validate_csv(prompt="Enter .csv filename: "):
+    DIR = os.listdir(os.curdir)
     message = 'Already a file with that name.'
     while True:
         filename = input(prompt)
