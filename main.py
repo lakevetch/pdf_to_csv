@@ -95,6 +95,9 @@ def validate_csv(prompt="Enter .csv filename: "):
     message = 'Already a file with that name.'
     while True:
         filename = input(prompt)
+        while filename.split(".")[-1] != "csv":
+            print('Please include ".csv" in your file name.')
+            filename = input(prompt)
         if filename in DIR:
             print(message)
             overwrite = validate_y_n("Overwrite file? (y/n): ")
