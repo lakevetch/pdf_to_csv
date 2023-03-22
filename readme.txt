@@ -1,7 +1,7 @@
 Hi! Thanks for using my pdf converter.
 
 This app has some dependencies. To install them follow these steps:
-1- Download and install python from python.org
+1- Download and install python from https://www.python.org/downloads/
 2- Download and install Java from https://www.oracle.com/java/technologies/downloads/#jdk20-linux
 3- Open a terminal. If you haven't done this before, how to do it depends on your system. A quick google should get you there.
 4- Type the following: python3 -m ensurepip
