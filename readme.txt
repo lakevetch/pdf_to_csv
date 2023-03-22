@@ -10,7 +10,7 @@ This app has some dependencies. To install them follow these steps:
 7- Downloads will initiate. When they finish, you are ready to go!
 
 To run the app on a Mac, just right-click (or two-fingered click or command-click) the file called "main.py", hover over "Open with", and scroll down to choose "Python Launcher" from the list.
-On Windows, if a double-click on the file doesn't run it, do a similar right-click, scroll down, find "Python" or similar (sometimes there are version numbers) and choose it to launch.
+On Windows, if a double-click on the file doesn't run it, do a similar right-click, scroll down to "Open with", find "Python" or similar (sometimes there are version numbers) and choose it to launch.
 On Linux, it really depends. I recommend googling for instructions for your specific distro.
 
 Once running, the app will open in a terminal window. Follow the text prompts to create your csv!
