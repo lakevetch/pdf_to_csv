@@ -51,7 +51,7 @@ def choose_pdf():
 
 def convert_to_csv(index):
     out_file = validate_csv('Enter desired output filename with .csv extension'
-                     ' (e.g. "file.csv"): ')
+                     ' (e.g. "file.csv"):\n')
     try:
         tabula.convert_into(DIR[index], out_file, output_format="csv", pages="all")
         return out_file
