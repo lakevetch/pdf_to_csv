@@ -1,23 +1,17 @@
 Hi! Thanks for using my pdf converter.
 
+
 To install this app on your computer, simply clone this repository into a directory where you want to store it.
 
 If that didn't make sense to you, follow these instructions:
 
 1. Open a terminal. If you haven't done this before, how to do it depends on your system. A quick google to the effect of "terminal [your_os_here]" should get you there.
-
 2. Ensure you have Git installed: 
   - Follow this link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
   - Find and follow the instructions for your operating system
-
-3. I recommend starting by installing the folder to your Desktop directory, get there by typing into your terminal window:
-   cd Desktop
-   
-4. Type the following:
-   git clone https://github.com/lakevetch/pdf_to_csv
-   
+3. I recommend starting by installing the folder to your Desktop directory, get there by typing into your terminal window: cd Desktop   
+4. Type the following: git clone https://github.com/lakevetch/pdf_to_csv   
 5. Git will download all of the files from this repository to your Desktop folder.
-
 6. Feel free to drag and drop the folder anywhere you like from here :)
 
 
